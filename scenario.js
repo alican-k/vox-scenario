@@ -5,7 +5,7 @@ const vox = '16502493791'      // this is a Voximplant purcahsed number
 
 
 VoxEngine.addEventListener(AppEvents.CallAlerting, e => {
-  call = VoxEngine.callPSTN(home, vox)
+  call = VoxEngine.callPSTN(friend, vox)
   // call = VoxEngine.callPSTN(home, e.callerid)
   call.addEventListener(CallEvents.Ringing, () => {trace('ringing..')})
   call.addEventListener(CallEvents.Connected, e2 => {
